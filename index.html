@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CRUD OPRATION</title>
+
+        <!-- css file -->
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="form">
+                <input type="text" class="input" placeholder="add task">
+                <input type="submit" class="add" value="Add Task">
+            </div>
+            <ul class="tasks">
+                Empty...
+                <!-- <li class="task">
+                    <p class="text">plicabo, qui eligendi</p>
+                    <div class="controll">
+                        <button type="button" class="material-icons edit">edit</button>
+                        <button type="button" class="material-icons remove">delete</button>
+                    </div>
+                </li> -->
+            </ul>
+        </div><!-- ./container -->
+
+        <div class="detail">
+            <div class="detail-info">
+                <div><button type="button" class="remove-all-tasks">remove all</button></div>
+                <div>complate : <span class="complate">0</span></div>
+                <div>counter : <span class="counter">0</span></div>
+            </div>
+
+            <div class="search">
+                <input type="search" id="search" placeholder="search...">
+            </div>
+            <span class="material-icons list-icon">segment</span>
+        </div>
+
+        <!-- <div class="edit-data">
+            <div class="form">
+                <input type="text" class="input edit-input" placeholder="Edit task" >
+                <input type="submit" class="add edit-btn" value="Edit Done">
+            </div>
+        </div>./edit -->
+
+        <script src="javaScript/js.js"></script>
+    </body>
+</html>

@@ -1,0 +1,174 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mainColor : #eee;
+    --styleColor :brown ;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: darkgray;
+}
+
+.container {
+    width: 55%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.form {
+    padding: 20px;
+    background-color: var(--mainColor);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form .input {
+    all: unset;
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+.form .add {
+    all: unset;
+    width: fit-content;
+    padding: 10px;
+    background-color: var(--styleColor);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.tasks {
+    list-style: none;
+    background-color: var(--mainColor);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0px;
+}
+.tasks .task {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    border-bottom: 4px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    cursor: grab;
+}
+.tasks .task:last-child {
+    margin-bottom: 0px;
+}
+.tasks .task.done {
+    opacity: .5;
+    transform: scale(.9);
+}
+.tasks .task .text {
+    max-width: 90%;
+    text-transform: capitalize;
+}
+.task .controll {
+    width: 60px;
+}
+.task .controll button {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: none;
+    cursor: pointer;
+}
+.controll .remove {
+    color: var(--styleColor);
+}
+.controll .edit-icon {
+    color: green;
+}
+
+.detail , .detail-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.detail {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ddd;
+    padding: 10px 200px;
+    text-transform: capitalize;
+}
+.detail div {
+    color:#212121;
+}
+
+.detail div button {
+    all: unset;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--styleColor);
+    padding: 10px;
+    cursor: pointer;
+}
+.search {
+    width: 300px;
+}
+.detail .search input {
+    display: block;
+    padding: 8px 10px;
+    width: 300px;
+    font-size: 16px;
+    color: #212121;
+    border: none;
+    border-radius: 40px;
+    outline: none;
+    width: 100%;
+}
+
+.list-icon {
+    font-size: 35px !important;
+    display: none !important;
+}
+
+@media screen and (max-width:757px){
+    .detail {
+        padding: 10px 10px;
+    }
+    .container {
+        width: 95%;
+        top: 15%;
+    }
+    .form .input {
+        max-width: 61%;
+    }
+    .list-icon {
+        display: block !important;
+    }
+    .detail-info {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+        background-color:ghostwhite;
+        border-radius: 5px;
+        outline: 2px solid #212121;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: .3s ease-in-out;
+    }
+    .detail-info.active {
+        transform: scaleY(1);
+    }
+}
